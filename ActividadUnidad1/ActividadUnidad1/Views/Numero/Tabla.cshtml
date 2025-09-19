@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Tabla de Multiplicar";
+    var numero = ViewBag.Numero;
+    var tabla = ViewBag.Tabla as List<string>;
+}
+
+<h2>Generador de tabla de multiplicar</h2>
+
+<form method="post">
+    <label for="numero">Ingresa un número:</label>
+    <input type="number" name="numero" id="numero" required />
+    <button type="submit">Generar</button>
+</form>
+
+@if (tabla != null)
+{
+    <h3>Tabla del @numero</h3>
+    <ul>
+        @foreach (var linea in tabla)
+        {
+            <li>@linea</li>
+        }
+    </ul>
+}

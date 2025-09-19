@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+using System.Web.Mvc;
+
+namespace TuProyecto.Controllers
+{
+    public class PresentacionController : Controller
+    {
+        // Acción Saludo
+        public ActionResult Saludo()
+        {
+            // Pasamos los datos a la vista mediante ViewBag
+            ViewBag.Nombre = "Russell Brayan Inoa";   
+            ViewBag.Matricula = "MT-2023-00456";         
+
+            return View();
+        }
+    }
+}
