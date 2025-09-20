@@ -5,14 +5,14 @@ namespace TuProyecto.Controllers
 {
     public class NumeroController : Controller
     {
-        // Acción GET: muestra el formulario
+       
         [HttpGet]
         public IActionResult Tabla()
         {
             return View();
         }
 
-        // Acción POST: recibe el número y genera la tabla
+        
         [HttpPost]
         public IActionResult Tabla(int numero)
         {
