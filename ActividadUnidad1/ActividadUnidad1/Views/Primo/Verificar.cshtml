@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Verificar número primo";
+}
+
+<h2>Verificar si un número es primo</h2>
+
+<form method="get" asp-controller="Primo" asp-action="Verificar">
+    <label for="numero">Número:</label>
+    <input type="number" name="numero" id="numero" required />
+    <button type="submit">Verificar</button>
+</form>
+
+@if (ViewBag.Mensaje != null)
+{
+    <p><strong>@ViewBag.Mensaje</strong></p>
+}

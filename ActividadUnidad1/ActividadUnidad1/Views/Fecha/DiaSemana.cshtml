@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Día de la semana";
+}
+
+<h2>Verificar día de la semana</h2>
+
+<form method="get" asp-controller="Fecha" asp-action="DiaSemana">
+    <label for="fecha">Fecha:</label>
+    <input type="date" name="fecha" id="fecha" required />
+    <button type="submit">Consultar</button>
+</form>
+
+@if (ViewBag.Mensaje != null)
+{
+    <p><strong>@ViewBag.Mensaje</strong></p>
+}
+
